@@ -24,3 +24,28 @@ System.out.print(l1 == 127L);
 1.2 -128 - 127之间的值，Java维护在一个常量池中，所以l1和l2引用同一个对象。
 
 考察点：常量池、==、自动装箱拆箱
+
+
+### 2、给出以后代码的运行结果
+```java 
+    String s1 = "abc";
+    String s2 = "abc";
+    String s3= new String("abc");
+    System.out.println("s1 == s2 ? "+(s1==s2));
+    System.out.println("s1 == s3 ? "+(s1==s3)); 
+    System.out.println("s1 equals s3 ? "+(s1.equals(s3))); 
+```
+结果： 
+```java 
+    String s1 = "abc";
+    String s2 = "abc";
+    String s3= new String("abc");
+    System.out.println("s1 == s2 ? "+(s1==s2)); //true
+    System.out.println("s1 == s3 ? "+(s1==s3)); //false
+    System.out.println("s1 equals s3 ? "+(s1.equals(s3))); //true
+```
+
+原因:
+有两种方式判断字符串是否相等（==和equals），==除了判断字符串值相等还有比较引用地址，equals只比较值。
+
+考察点：==和equals
