@@ -69,6 +69,19 @@ false
 
 考察点：字符串的创建与比较
 
+### 4、以下代码会输出什么？
+
+```java 
+String s1 = "abc";
+StringBuffer s2 = new StringBuffer(s1);
+System.out.println(s1.equals(s2));
+```
+结果：
+false
+
+原因:
+由于s2不是String类型，所以打印false，如果你看过String的equals方法源码，会发现有instanceof判断比较的类型是否是String类型。
+
 
 
 
