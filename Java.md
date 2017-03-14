@@ -49,7 +49,6 @@ System.out.print(l1 == 127L);
 ```
 
 原因:
-
 有两种方式判断字符串是否相等（==和equals），==除了判断字符串值相等还有比较引用地址，equals只比较值。
 
 考察点：==和equals
@@ -57,14 +56,13 @@ System.out.print(l1 == 127L);
 ### 3、给出下面代码的运行结果
 ```java 
     String s1 = new String("abc");
-	String s2 = new String("abc");
-	System.out.println(s1 == s2);
+    String s2 = new String("abc");
+    System.out.println(s1 == s2);
 ```
 结果：
 false
 
 原因:
-
 由于用new操作符创建字符串，会在堆内存创建两个对象，s1,s2是不用的两个引用，如果用双引号直接创建，打印结果为true
 
 考察点：字符串的创建与比较
